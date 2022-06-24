@@ -5,7 +5,6 @@ import time
 
 logging.basicConfig(format='%(asctime)s.%(msecs)03d [%(threadName)s] - %(message)s', datefmt='%H:%M:%S', level=logging.INFO)
 
-
 dato1 = 0
 numLectores = 0
 
@@ -27,7 +26,6 @@ def Escritor():
             logging.info(f'Escritor escribe dato1 = {dato1}')
         time.sleep(random.randint(1,4))
 
-
 def main():
     nlector = 10
     nescritor = 2
@@ -40,7 +38,5 @@ def main():
 
     time.sleep(300)
 
-
 if __name__ == "__main__":
     main()
-

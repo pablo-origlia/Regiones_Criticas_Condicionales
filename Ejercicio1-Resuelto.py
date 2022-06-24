@@ -6,7 +6,6 @@ from regionCondicional import *
 
 logging.basicConfig(format='%(asctime)s.%(msecs)03d [%(threadName)s] - %(message)s', datefmt='%H:%M:%S', level=logging.INFO)
 
-
 class RecursoDato(Recurso):
     dato1 = 0
     numLectores = 0
@@ -21,7 +20,6 @@ def condicionEscritor():
 
 regionLector = RegionCondicional(datos, condicionLector)
 regionEscritor = RegionCondicional(datos, condicionEscritor)
-
 
 @regionLector.condicion
 def doLector1():
@@ -49,8 +47,6 @@ def Escritor():
         doEscritor()
         time.sleep(random.randint(1,4))
 
-
-
 def main():
     nlector = 10
     nescritor = 2
@@ -63,7 +59,5 @@ def main():
 
     time.sleep(300)
 
-
 if __name__ == "__main__":
     main()
-
