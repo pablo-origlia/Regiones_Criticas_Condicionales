@@ -178,9 +178,9 @@ class RegionCondicional():
                         self.recurso.mutex.release()
                     self.recurso.wait.acquire()
                 self.recurso.count = self.recurso.count-1
-    #Codigo region critica
+            #Codigo region critica
             do()
-    #Fin Código región critica
+            #Fin Código región critica
             if self.recurso.count > 0:
                 self.recurso.temp = 0
                 self.recurso.wait.release()
